@@ -1,10 +1,16 @@
 <?php
-Function triangle(){
-    for($i=1;$i<=10;$i++){
+
+if(isset($_GET['nb'])) {
+    $nombre = intval($_GET['nb']);
+Function triangle($nombre){
+    for($i=1;$i<=$nombre;$i++){
         for($j=1;$j<=$i;$j++){
             echo"*";
         }
-        echo"\n";
+        echo "<br>";
     }
 }
-
+    echo "Triangle : <br>";
+    triangle($nombre);
+}
+?>
